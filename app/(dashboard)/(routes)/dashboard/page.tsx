@@ -2,7 +2,8 @@
 
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { ArrowRight, MessageSquare } from "lucide-react";
+import { ArrowRight, Code, ImageIcon, MessageSquare, Music } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const tools = [
   {
@@ -11,10 +12,39 @@ const tools = [
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
     href: "/conversation"
+  },
+  {
+    label: "Music Generation",
+    icon: Music,
+    color: "text-emerald-500",
+    bgColor: "bg-emerald-500/10",
+    href: "/music"
+  },
+  {
+    label: "Image Generation",
+    icon: ImageIcon,
+    color: "text-pink-700",
+    bgColor: "bg-pink-700/10",
+    href: "/image"
+  },
+  {
+    label: "Video Generation",
+    icon: MessageSquare,
+    color: "text-orange-500",
+    bgColor: "bg-orange-500/10",
+    href: "/video"
+  },
+  {
+    label: "Code Generation",
+    icon: Code,
+    color: "text-green-500",
+    bgColor: "bg-green-500/10",
+    href: "/code"
   }
 ]
 
 export default function DashboardPage() {
+  const router = useRouter();
   return (
     <div>
       <div className="mb-8 space-y-4">
@@ -28,6 +58,7 @@ export default function DashboardPage() {
       <div className="px-4 md:px-12 lg:px-32 space-y-4">
         {tools.map((tool) => (
           <Card 
+            onClick={() => router.push(tool.href)}
             key={tool.href}
             className="p-4 border-black/5 flex items-center justify-between hover:shadow-md transition cursor-pointer"
           >
