@@ -26,30 +26,37 @@ const routes = [
         href: "/conversation",
         color: "text-violoet-700"
     }, 
-    {
-        label: "Image Generation",
-        icon: ImageIcon,
-        href: "/image",
-        color: "text-pink-700"
-    }, 
-    {
-        label: "Video Generation",
-        icon: LayoutDashboard,
-        href: "/video",
-        color: "text-orange-700"
-    }, 
-    {
-        label: "Music Generation",
-        icon: Music,
-        href: "/music",
-        color: "text-emerald-500"
-    }, 
+    // {
+    //     label: "Image Generation",
+    //     icon: ImageIcon,
+    //     href: "/image",
+    //     color: "text-pink-700"
+    // }, 
+    // {
+    //     label: "Video Generation",
+    //     icon: LayoutDashboard,
+    //     href: "/video",
+    //     color: "text-orange-700"
+    // }, 
+    // {
+    //     label: "Music Generation",
+    //     icon: Music,
+    //     href: "/music",
+    //     color: "text-emerald-500"
+    // }, 
     {
         label: "Code Generation",
         icon: Code,
         href: "/code",
         color: "text-green-700"
     }, 
+    {
+        label: "Slide Explanation",
+        icon: MessageSquare,
+        color: "text-pink-700",
+        bgColor: "bg-pink-700/10",
+        href: "/slide"
+    },
     {
         label: "Settings",
         icon: Settings,
