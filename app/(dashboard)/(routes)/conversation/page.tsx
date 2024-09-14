@@ -40,7 +40,6 @@ export default function ConversationPage() {
             };
 
             // Add the user's message to the state
-            const newMessages = [...messages, userMessage];
 
             // Call the API with the messages
             const response = await axios.post("/api/conversation", {
