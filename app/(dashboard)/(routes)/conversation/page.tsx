@@ -57,7 +57,7 @@ export default function ConversationPage() {
 
             // Reset the form
             form.reset();
-        } catch (error: any) {
+        } catch (error) {
             console.log(error);
         } finally {
             router.refresh();
