@@ -1,7 +1,5 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
-import { ChatCompletionAssistantMessageParam, ChatCompletionUserMessageParam } from "openai/resources/index.mjs";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // const openai = new OpenAI();

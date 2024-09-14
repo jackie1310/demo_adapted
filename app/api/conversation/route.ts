@@ -1,9 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-
-const openai = new OpenAI();
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY as string);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
