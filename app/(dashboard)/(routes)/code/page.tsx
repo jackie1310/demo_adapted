@@ -41,7 +41,6 @@ export default function CodePage() {
             };
 
             // Add the user's message to the state
-            const newMessages = [...messages, userMessage];
 
             // Call the API with the messages
             const response = await axios.post("/api/code", {
@@ -59,7 +58,7 @@ export default function CodePage() {
 
             // Reset the form
             form.reset();
-        } catch (error: any) {
+        } catch (error) {
             console.log(error);
         } finally {
             router.refresh();
@@ -125,13 +124,13 @@ export default function CodePage() {
                                 {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
                                 <ReactMarkdown
                                     components={{
-                                        pre: ({ node, ...props }) => (
+                                        pre: ({ ...props }) => (
                                             <div className="overflow-auto w-full my-2 bg-black/10 p-2 rounded-lg">
                                                 <pre {...props}/>
                                             </div>
                                         ), 
 
-                                        code: ({ node, ...props}) => (
+                                        code: ({ ...props}) => (
                                             <code className="bg-black/10 rounded-lg p-1" {...props}/>
                                         )
                                     }}
